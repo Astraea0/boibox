@@ -5,12 +5,10 @@ snakes**
 
 Python tool using asynchronous web requests to manage files on [catbox.moe](https://catbox.moe).
 
-## Install
+## Installation
 
 ```bash
-git clone https://github.com/Astraea0/boibox.git
-cd boibox
-pip install .
+pip install boibox
 ```
 
 ## Features
