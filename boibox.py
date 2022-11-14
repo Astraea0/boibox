@@ -72,11 +72,13 @@ async def async_main():
 
     async with CBManager() as cb_manager:
         if args.command == "upload":
-            for coro in tqdm(asyncio.as_completed([cb_manager.upload(file, args.userhash) for file in args.filename]), total=len(args.filename)):
+            for coro in tqdm(asyncio.as_completed([cb_manager.upload(file, args.userhash) for file in args.filename]),
+                             total=len(args.filename)):
                 filename, output = await coro
                 tqdm.write(f'{filename} -> {output}')
         elif args.command == "download":
-            for coro in tqdm(asyncio.as_completed([cb_manager.download(url, args.destination) for url in args.url]), total=len(args.url)):
+            for coro in tqdm(asyncio.as_completed([cb_manager.download(url, args.destination) for url in args.url]),
+                             total=len(args.url)):
                 tqdm.write(str(await coro))
         elif args.command == "delete":
             print(await cb_manager.delete(args.url, args.userhash))
