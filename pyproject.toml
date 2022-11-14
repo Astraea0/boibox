@@ -4,8 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "boibox"
-version = "1.1.0"
+version = "1.1.1"
 license = { text = "zlib/libpng License" }
+keywords = ["catbox", "cli", "asyncio"]
 authors = [
   { name="Astraea" }
 ]
