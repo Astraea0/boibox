@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "boibox"
+version = "1.1.0"
+license = { text = "zlib/libpng License" }
+authors = [
+  { name="Astraea" }
+]
+description = "Python tool using asynchronous web requests to manage files on catbox.moe"
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+    "aiohttp >= 3.8.0",
+    "tqdm >= 4.0"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: zlib/libpng License",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Framework :: AsyncIO",
+    "Operating System :: OS Independent",
+    "Topic :: Communications :: File Sharing",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers"
+]
+
+[project.scripts]
+boibox = "boibox:main"
+
+[project.urls]
+"Homepage" = "https://github.com/Astraea0/boibox"
